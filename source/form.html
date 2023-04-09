@@ -14,20 +14,18 @@
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <div class="main-nav_wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-list__item--current">
               <a href="index.html">Главная</a>
             </li>
-            <li class="site-list__item">
+            <li class="main-nav__item">
               <a href="catalog.html">Фото и видео</a>
             </li>
-          </ul>
-          <ul class="main-nav__list user-list">
-            <li class="user-list__item">
-              <a href="#">Форма отзыва</a>
+            <li class="main-nav__item">
+              <a href="form.html">Форма отзыва</a>
             </li>
-            <li class="user-list__item">
+            <li class="main-nav__item">
               <a href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
@@ -36,16 +34,12 @@
     </header>
     <main class="main-container">
       <div class="main-promo">
-        <h1 class="visually-hidden">Седона.</h1>
+        <h1 class="visually-hidden">Форма отзыва.Седона.</h1>
         <img src="img/catalog/sedona-catalog.svg" width="229" height="39" alt="Sedona.">
       </div>
-      <section class="form">
-        <div class="form__wrapper">
-          <header class="form__header">
-            <h2 class="form__title form-title">Оставьте свой отзыв</h2>
-            <p class="form__description form-text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-          </header>
-        </div>
+      <section class="form__wrapper form">
+        <h2 class="form__title section__title form-title">Оставьте свой отзыв</h2>
+        <p class="form__description section__description form-text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="feedback__name name">
             <legend class="name__title form-title">Представьтесь:</legend>
@@ -131,8 +125,9 @@
           </fieldset>
           <fieldset class="feedback__emotions emotions">
             <legend class="emotions__title form-title">Опишите свои эмоции:</legend>
-            <label class="label__emotions" for="emotions-text"></label>
+            <label class="label__emotions" for="emotions-text">
               <textarea class="emotions-text" name="massage" id="emotions-text" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+            </label>
           </fieldset>
         </form>
         <div>
@@ -158,7 +153,7 @@
               </a>
             </li>
             <li class="social__item">
-               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
               </a>
             </li>
