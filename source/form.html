@@ -33,14 +33,18 @@
         </div>
       </nav>
     </header>
+
     <main class="page-container">
       <div class="page-promo">
         <h1 class="visually-hidden">Форма отзыва.Седона.</h1>
         <img src="img/sedona-catalog.svg" width="229" height="39" alt="Sedona.">
       </div>
-      <section class="section">
+
+      <section class="page-form">
+        <div class="section">
         <h2 class="section__title title">Оставьте свой отзыв</h2>
         <p class="section__description description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+        </div>
         <form class="form-feedback" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="form">
             <legend class="form__title title">Представьтесь:</legend>
@@ -59,6 +63,7 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="form">
             <legend class="form__title title">Контактная информация:</legend>
             <ul class="form__list">
@@ -72,70 +77,78 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="form">
-            <legend class="form__title title">Ваше общее впечатление:</legend>
+            <div class="form__choice">
+            <legend class="form__title form__title-choice title">Ваше общее впечатление:</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__impression label">
-                  <input class="form__input input" type="radio" name="impress" value="positive" checked>
+                  <input class="form__input" type="radio" name="impress" value="positive" checked>
                   Скорее положительное
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__impression label">
-                  <input class="form__input input" type="radio" name="impress" value="negative">
+                  <input class="form__input" type="radio" name="impress" value="negative">
                   Скорее отрицательное
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__impression label">
-                  <input class="form__input input" type="radio" name="impress" value="difficult">
+                  <input class="form__input" type="radio" name="impress" value="difficult">
                   Затрудняюсь ответить
                 </label>
               </li>
             </ul>
+            </div>
           </fieldset>
+
           <fieldset class="form">
-            <legend class="form__title title">Посещенные достопримечательности:</legend>
+            <div class="form__choice">
+            <legend class="form__title form__title-choice title">Посещенные достопримечательности:</legend>
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__attraction label">
-                  <input class="form__input input" type="checkbox" name="devil-bridge" checked>
+                  <input class="form__input" type="checkbox" name="devil-bridge" checked>
                   Мост дьявола
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__attraction label">
-                  <input class="form__input input" type="checkbox" name="mount-Bell" checked>
+                  <input class="form__input" type="checkbox" name="mount-Bell" checked>
                   Гора-Колокол
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__attraction label">
-                  <input class="form__input input" type="checkbox" name="slide-park" checked>
+                  <input class="form__input" type="checkbox" name="slide-park" checked>
                   Слайд-парк
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__attraction label">
-                  <input class="form__input input" type="checkbox" name="red-rocks">
+                  <input class="form__input" type="checkbox" name="red-rocks">
                   Красные скалы
                 </label>
               </li>
             </ul>
+            </div>
           </fieldset>
+
           <fieldset class="form">
+            <div class="form-emotions">
             <legend class="form__title title">Опишите свои эмоции:</legend>
-            <label class="form__emotions label" for="emotions-text">
+            <label class="form__emotions-label" for="emotions-text">
               <span class="visually-hidden">Опишите подробно все свои впечатления.</span>
               <textarea class="emotions-text label" name="massage" id="emotions-text" cols="1" rows="1">Опишите подробно все свои восторги</textarea>
             </label>
+            </div>
           </fieldset>
+
+            <button class="button form-feedback__button" type="submit">Отправить отзыв</button>
+            <small class="form-feedback__required-description">* — обязательные поля</small>
         </form>
-        <div>
-          <button class="button button__feedback " type="submit">Отправить отзыв</button>
-          <small>* — обязательные поля</small>
-        </div>
       </section>
     </main>
     <footer class="main-footer">
@@ -171,17 +184,19 @@
     </footer>
 
     <div class="modal">
-      <div class="modal__wrapper">
+      <div class="modal__error">
         <h2 class="modal__title form-title">Что-то пошло не так!</h2>
-        <p class="modal__description form-text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="button modal__button">Ok</button>
+        <p class="modal__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="button modal__error-button">Ok</button>
       </div>
     </div>
     <div class="modal">
-      <div class="modal__wrapper">
+      <div class="modal__sent">
         <h2 class="modal__title form-title">Ваш отзыв отправлен!</h2>
-        <p class="modal__description form-text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-        <button class="button modal__button">Закрыть окно</button>
+        <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="modal__sent-button-block">
+        <button class="button modal__sent-button">Закрыть окно</button>
       </div>
     </div>
   </body>
