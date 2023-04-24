@@ -9,28 +9,26 @@
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
+        <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седона.">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню.</span>
-        </button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="main-nav__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="main-nav__item main-nav__item--current">
-              <a href="catalog.html">Фото и видео</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Форма отзыва</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/">HTML Academy</a>
-            </li>
-          </ul>
-        </div>
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Открыть меню.</span>
+      </button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--active">
+          <a class="main-nav__link" href="index.html">Главная</a>
+        </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="form.html">Форма отзыва</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+      </ul>
       </nav>
     </header>
 
@@ -39,67 +37,79 @@
         <h1 class="visually-hidden">Фото и видео.</h1>
         <img src="img/sedona-catalog.svg" width="229" height="39" alt="Sedona.">
       </div>
-      <section class="page-card photo">
-        <div class="section">
-        <h2 class="section__title title">Фото и видео</h2>
-        <p class="section__description description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+
+      <section class="photo">
+
+        <div class="section-page">
+        <h2 class="section-page__title">Фото и видео</h2>
+        <p class="section-page__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
         </div>
+
         <ul class="photo__list">
           <li class="photo__item">
             <img class="photo__image" src="img/road-at-sunset.jpg" width="280" height="280" alt="Дорога на закате.">
             <h3 class="photo__title">Неродные просторы</h3>
             <p class="photo__author">Автор фото: Борис</p>
-            <button class="button button--like" type="button">
+            <button class="button photo__button" type="button">
               <span class="visually-hidden">Мне нравится</span>
             </button>
-            <span class="visually-hidden">Количество лайков</span>
-            <span class="photo__like">1350</span>
+            <p class="photo__like">
+              <span class="visually-hidden">Количество лайков</span>
+              1350
+            </p>
           </li>
           <li class="photo__item">
             <img class="photo__image" src="img/flower.jpg" width="280" height="280" alt="Цветы на фоне скал.">
             <h3 class="photo__title">Местная растительность</h3>
             <p class="photo__author">Автор фото: Сергей</p>
-            <button class="button button--like" type="button">
+            <button class="button photo__button" type="button">
               <span class="visually-hidden">Мне нравится</span>
             </button>
-            <span class="visually-hidden">Количество лайков</span>
-            <span class="photo__like">143</span>
+            <p class="photo__like">
+              <span class="visually-hidden">Количество лайков</span>
+              143
+            </p>
           </li>
           <li class="photo__item">
             <img class="photo__image" src="img/road-in-forest.jpg" width="280" height="280" alt="Дорога в лесу.">
             <h3 class="photo__title">Дорога на север</h3>
             <p class="photo__author">Автор фото: Петр</p>
-            <button class="button button--like" type="button">
+            <button class="button photo__button" type="button">
               <span class="visually-hidden">Мне нравится</span>
             </button>
-            <span class="visually-hidden">Количество лайков</span>
-            <span class="photo__like">96</span>
+            <p class="photo__like">
+              <span class="visually-hidden">Количество лайков</span>
+              96
+            </p>
           </li>
           <li class="photo__item">
             <img class="photo__image" src="img/canyon.jpg" width="280" height="280" alt="Фото скал.">
             <h3 class="photo__title">Мост дьявола</h3>
             <p class="photo__author">Автор фото: Антон</p>
-            <button class="button button--like" type="button">
+            <button class="button photo__button" type="button">
               <span class="visually-hidden">Мне нравится</span>
             </button>
-            <span class="visually-hidden">Количество лайков</span>
-            <span class="photo__like">254</span>
+            <p class="photo__like">
+              <span class="visually-hidden">Количество лайков</span>
+              254
+            </p>
           </li>
         </ul>
       </section>
+
       <section class="video">
-        <div class="video__section section">
+        <div class="video__section section-page">
         <h2 class="visually-hidden">Видеопрезентация.</h2>
-        <p class="section__title title">Все еще сомневаетесь?</p>
-        <p class="section__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+        <p class="section-page__title">Все еще сомневаетесь?</p>
+        <p class="section-page__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <img class="video-image" src="img/video-mobile.jpg" alt="Видеопрезентация.">
+        <img src="img/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
       </section>
     </main>
+
     <footer class="main-footer">
-      <h2 class="visually-hidden">Контакты</h2>
       <div class="main-footer__wrapper">
-        <a class="footer-hashtag" href="#">#VISITSEDONA</a>
+        <a class="main-footer__hashtag" href="#">#VISITSEDONA</a>
         <div class="main-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -119,9 +129,9 @@
             </li>
           </ul>
         </div>
-        <div class="main-footer__copyright copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <div class="main-footer__copyright">
+          <b class="main-footer__copyright-text">Разработано</b>
+          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="visually-hidden">HTML Academy.</span>
           </a>
         </div>
