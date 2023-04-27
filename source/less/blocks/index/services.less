@@ -3,6 +3,13 @@
   padding: 24px 18px 28px 65px;
   text-align: left;
   list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
 }
 
 .services__title {
@@ -16,4 +23,15 @@
 
 .services__description {
   margin: 0;
+}
+
+.services__item {
+  margin: 0;
+  padding: 0;
+  @media (min-width: @tablet-width) {
+    text-align: center;
+    min-width: 256px;
+    box-sizing: border-box;
+    padding: 150px 33px 64px 33px;
+  }
 }
