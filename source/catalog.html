@@ -17,11 +17,11 @@
         <span class="visually-hidden">Открыть меню.</span>
       </button>
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">Главная</a>
         </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Фото и видео</a>
+            <a class="main-nav__link main-nav__link--active" href="catalog.html">Фото и видео</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link" href="form.html">Форма отзыва</a>
@@ -47,53 +47,72 @@
         </div>
 
         <ul class="photo__list">
-          <li class="photo__item">
+          <li class="photo__item photo-item--long">
             <img class="photo__image" src="img/road-at-sunset.jpg" width="280" height="280" alt="Дорога на закате.">
-            <h3 class="photo__title">Неродные просторы</h3>
-            <p class="photo__author">Автор фото: Борис</p>
-            <button class="button photo__button" type="button">
-              <span class="visually-hidden">Мне нравится</span>
-            </button>
-            <p class="photo__like">
-              <span class="visually-hidden">Количество лайков</span>
-              1350
-            </p>
+            <div class="photo__info">
+              <div class="photo__info-wrapper">
+                <h3 class="photo__title">Неродные просторы</h3>
+                <p class="photo__author">Автор фото: Борис</p>
+              </div>
+              <button class="button photo__button" type="button">
+                <span class="visually-hidden">Мне нравится</span>
+                <p class="photo__like">
+                  <span class="visually-hidden">Количество лайков</span>
+                  1350
+                </p>
+              </button>
+            </div>
           </li>
+
           <li class="photo__item">
             <img class="photo__image" src="img/flower.jpg" width="280" height="280" alt="Цветы на фоне скал.">
-            <h3 class="photo__title">Местная растительность</h3>
-            <p class="photo__author">Автор фото: Сергей</p>
-            <button class="button photo__button" type="button">
-              <span class="visually-hidden">Мне нравится</span>
-            </button>
-            <p class="photo__like">
-              <span class="visually-hidden">Количество лайков</span>
-              143
-            </p>
+            <div class="photo__info">
+              <div class="photo__info-wrapper">
+                <h3 class="photo__title">Местная растительность</h3>
+                <p class="photo__author">Автор фото: Сергей</p>
+              </div>
+              <button class="button photo__button" type="button">
+                <span class="visually-hidden">Мне нравится</span>
+                <p class="photo__like">
+                  <span class="visually-hidden">Количество лайков</span>
+                  143
+                </p>
+              </button>
+            </div>
           </li>
+
           <li class="photo__item">
             <img class="photo__image" src="img/road-in-forest.jpg" width="280" height="280" alt="Дорога в лесу.">
-            <h3 class="photo__title">Дорога на север</h3>
-            <p class="photo__author">Автор фото: Петр</p>
-            <button class="button photo__button" type="button">
-              <span class="visually-hidden">Мне нравится</span>
-            </button>
-            <p class="photo__like">
-              <span class="visually-hidden">Количество лайков</span>
-              96
-            </p>
+            <div class="photo__info">
+              <div class="photo__info-wrapper">
+                <h3 class="photo__title">Дорога на север</h3>
+                <p class="photo__author">Автор фото: Петр</p>
+              </div>
+              <button class="button photo__button" type="button">
+                <span class="visually-hidden">Мне нравится</span>
+                <p class="photo__like">
+                  <span class="visually-hidden">Количество лайков</span>
+                  96
+                </p>
+              </button>
+            </div>
           </li>
+
           <li class="photo__item">
             <img class="photo__image" src="img/canyon.jpg" width="280" height="280" alt="Фото скал.">
-            <h3 class="photo__title">Мост дьявола</h3>
-            <p class="photo__author">Автор фото: Антон</p>
-            <button class="button photo__button" type="button">
-              <span class="visually-hidden">Мне нравится</span>
-            </button>
-            <p class="photo__like">
-              <span class="visually-hidden">Количество лайков</span>
-              254
-            </p>
+            <div class="photo__info">
+              <div class="photo__info-wrapper">
+                <h3 class="photo__title">Мост дьявола</h3>
+                <p class="photo__author">Автор фото: Антон</p>
+              </div>
+              <button class="button photo__button" type="button">
+                <span class="visually-hidden">Мне нравится</span>
+                <p class="photo__like">
+                  <span class="visually-hidden">Количество лайков</span>
+                  254
+                </p>
+              </button>
+            </div>
           </li>
         </ul>
       </section>
@@ -104,7 +123,7 @@
         <p class="section-page__title">Все еще сомневаетесь?</p>
         <p class="section-page__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
         </div>
-        <img src="img/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
+        <img class="video__image" src="img/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация.">
       </section>
     </main>
 

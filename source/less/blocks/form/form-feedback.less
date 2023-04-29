@@ -1,3 +1,16 @@
+.form-feedback {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .form-feedback__button {
   width: 100%;
+}
+
+.form-feedback__required-description {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
 }

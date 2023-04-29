@@ -2,6 +2,13 @@
   border: none;
   margin: 0;
   padding: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.data-form--large {
+  @media (min-width: @tablet-width) {
+    grid-column: 1/-1;
+  }
 }
 
 .data-form__legend {
@@ -17,6 +24,12 @@
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.data-form__list--large {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
 }
 
 .data-form__text {
