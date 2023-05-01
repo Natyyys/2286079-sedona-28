@@ -6,7 +6,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 120px;
+    padding: 0;
   }
 }
 
@@ -16,6 +16,7 @@
   padding: 24px 20px 0 20px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
@@ -32,12 +33,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    height: content;
     position: relative;
   }
 }
 
-.photo-item--long {
+.photo__item--long {
   @media (min-width: @tablet-width) {
     grid-column: 1/span 2;
   }
@@ -60,7 +60,6 @@
     height: 400px;
     object-fit: cover;
     object-position: center;
-    flex: 1 1 400;
     margin: 0;
   }
 }

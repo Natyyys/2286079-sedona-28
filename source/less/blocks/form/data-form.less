@@ -2,7 +2,14 @@
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.data-form:not(:last-child) {
   border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .data-form--large {
@@ -43,4 +50,16 @@
   width: 100%;
   box-sizing: border-box;
   min-height: 150px;
+  justify-items: stretch;
+
+  @media (min-width: @tablet-width) {
+    min-width: 648px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
+  }
 }
