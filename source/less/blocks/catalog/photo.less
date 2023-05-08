@@ -1,8 +1,31 @@
-.photo {
-  padding: 0 20px;
+.photo-section {
+  padding: 37px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 468px;
 
   @media (min-width: @tablet-width) {
+    padding: 66px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 100px 20px 65px;
+  }
+}
+
+.photo__list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet-width) {
+    border: 0;
     padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
   }
 
   @media (min-width: @desktop-width) {
@@ -10,23 +33,12 @@
   }
 }
 
-.photo__list {
-  margin: 0;
-  list-style: none;
-  padding: 24px 20px 0 20px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, auto);
-  }
-}
-
 .photo__item {
-  padding: 24px 0;
+  padding: 24px 20px;
+  border-bottom: 1px solid #e5e5e5;
 
   @media (min-width: @tablet-width) {
+    border: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -44,7 +56,7 @@
 }
 
 .photo__item:nth-child(3n) {
-  @media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
     .photo__info {
       background-color: #eaeaea;
     }
@@ -69,6 +81,7 @@
     display: flex;
     justify-content: space-between;
     background: #f2f2f2;
+    padding-left: 0 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -98,15 +111,43 @@
   }
 }
 
+.photo__info-wrapper {
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 22px 0 15px;
+  }
+}
+
 .photo__button {
+  background: transparent;
+  padding: 0;
+  padding-left: 37px;
+  position: relative;
+
   @media (min-width: @tablet-width) {
     background: transparent;
+    padding-left: 32px;
   }
 }
 
 .photo__like {
   font-weight: 700;
   color: #000000;
+  font-size: 14px;
+  line-height: 21px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    left: 0;
+    background-image: url("../img/like-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   @media (min-width: @desktop-width) {
     color: #ffffff;

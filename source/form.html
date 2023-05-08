@@ -40,12 +40,14 @@
       </div>
 
       <section class="page-form">
-        <div class="section-page">
+        <div class="page-form__section section-page">
         <h2 class="section-page__title section-page__title--large">Оставьте свой отзыв</h2>
         <p class="section-page__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
 
         <form class="form-feedback" action="https://echo.htmlacademy.ru/" method="post">
+
+          <div class="page-form__wrapper">
 
           <fieldset class="data-form">
             <legend class="data-form__legend">Представьтесь:</legend>
@@ -68,35 +70,39 @@
           <fieldset class="data-form">
             <legend class="data-form__legend">Контактная информация:</legend>
             <ul class="data-form__list">
-              <li class="field-control">
-                <label class="field-control__label" for="phone">Контактный телефон<sup>*</sup>:</label>
+              <li class="field-control field-control__icon field-control__icon--phone">
+                <label class="field-control__label " for="phone">Контактный телефон<sup>*</sup>:</label>
                 <input class="field-control__input field-control__input--opacity" type="tel" name="phone-number" id="phone" value="Введите телефон" required>
               </li>
-              <li class="field-control">
+              <li class="field-control field-control__icon field-control__icon--mail">
                 <label class="field-control__label" for="e-mail">Электронная почта<sup>*</sup>:</label>
                 <input class="field-control__input field-control__input--opacity" type="email" name="e-mail" id="e-mail" value="Введите e-mail" required>
               </li>
             </ul>
           </fieldset>
+        </div>
 
           <fieldset class="data-form data-form--large">
             <legend class="data-form__legend">Ваше общее впечатление:</legend>
-            <ul class="data-form__list data-form__list--large">
+            <ul class="data-form__list data-form__list--radio">
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="radio" name="impress" value="positive" checked>
+                  <span class="field-checkbox__mark field-checkbox__mark--radio"></span>
                   Скорее положительное
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="radio" name="impress" value="negative">
+                  <span class="field-checkbox__mark field-checkbox__mark--radio"></span>
                   Скорее отрицательное
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="radio" name="impress" value="difficult">
+                  <span class="field-checkbox__mark field-checkbox__mark--radio"></span>
                   Затрудняюсь ответить
                 </label>
               </li>
@@ -105,28 +111,32 @@
 
           <fieldset class="data-form data-form--large">
             <legend class="data-form__legend">Посещенные достопримечательности:</legend>
-            <ul class="data-form__list data-form__list--large">
+            <ul class="data-form__list data-form__list--checkbox">
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="checkbox" name="devil-bridge" checked>
+                  <span class="field-checkbox__mark"></span>
                   Мост дьявола
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="checkbox" name="mount-Bell" checked>
+                  <span class="field-checkbox__mark"></span>
                   Гора-Колокол
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="checkbox" name="slide-park" checked>
+                  <span class="field-checkbox__mark"></span>
                   Слайд-парк
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__intut" type="checkbox" name="red-rocks">
+                  <span class="field-checkbox__mark"></span>
                   Красные скалы
                 </label>
               </li>

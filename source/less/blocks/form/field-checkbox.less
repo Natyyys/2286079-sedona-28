@@ -2,4 +2,59 @@
   text-transform: none;
   font-size: 18px;
   font-weight: 700;
+  padding: 10px 0 10px 46px;
+  position: relative;
+  list-style: none;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 10px;
+  }
+}
+
+.field-checkbox {
+  margin-top: 16px;
+}
+
+.field-checkbox__mark {
+  position: absolute;
+  left: 20px;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  top: 0;
+
+  &--radio {
+    border-radius: 50%;
+  }
+}
+
+.field-checkbox__intut {
+  position: relative;
+  margin: 0;
+  margin-right: 16px;
+}
+
+.field-checkbox__intut[type="radio"]:checked + .field-checkbox__mark::before,
+.field-checkbox__intut[type="radio"]:checked + .field-checkbox__mark::after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: #333333;
+  border-radius: 50%;
+  content: "";
+}
+
+.field-checkbox__intut[type="checkbox"]:checked + .field-checkbox__mark::before,
+.field-checkbox__intut[type="checkbox"]:checked + .field-checkbox__mark::after {
+  position: absolute;
+  background-image: url("../img/tick.svg");
+  background-repeat: no-repeat;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  content: "";
 }
