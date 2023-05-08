@@ -52,6 +52,10 @@
 .photo__item--long {
   @media (min-width: @tablet-width) {
     grid-column: 1/-1;
+
+    .photo__image {
+      height: 400px;
+    }
   }
 }
 
@@ -69,7 +73,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    height: 400px;
+    height: 267px;
     object-fit: cover;
     object-position: center;
     margin: 0;
@@ -81,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     background: #f2f2f2;
-    padding-left: 0 20px;
+    padding: 0 20px;
   }
 
   @media (min-width: @desktop-width) {
