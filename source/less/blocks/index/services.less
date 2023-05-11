@@ -1,6 +1,6 @@
 .services {
   margin: 0;
-  padding: 24px 18px 13px 65px;
+  padding: 24px 18px 13px 0;
   text-align: left;
   list-style: none;
 
@@ -33,27 +33,16 @@
   margin: 0;
   margin-bottom: 33px;
   padding: 0;
+  padding-left: 65px;
   position: relative;
-
-  @media (min-width: @tablet-width) {
-    text-align: center;
-    min-width: 256px;
-    box-sizing: border-box;
-    padding: 150px 33px 64px 33px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 170px 50px 67px;
-  }
-
 
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
+    width: 40px;
     height: 40px;
     top: 0;
-    right: 47px;
+    left: 20px;
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -72,20 +61,25 @@
 
   @media (min-width: @tablet-width) {
     text-align: center;
+    min-width: 256px;
+    box-sizing: border-box;
+    padding: 150px 33px 64px 33px;
     margin: 0;
 
     &::after {
+      width: 80px;
       height: 80px;
       top: 62px;
       left: 50%;
-      transform: translateX(-15%);
+      transform: translateX(-50%);
     }
   }
 
   @media (min-width: @desktop-width) {
+    padding: 170px 50px 67px;
+
     &::after {
       top: 72px;
-      transform: translateX(-10%);
     }
   }
 }
