@@ -152,8 +152,8 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     margin: 0 auto;
+    align-items: center;
   }
 }
 
@@ -163,26 +163,15 @@
     padding: 18px 20px 17px;
     box-shadow: none;
     border: none;
-    width: 100%;
-    flex: 0 0 153px;
+    width: 20%;
     box-sizing: border-box;
     margin: 0;
     background-color: #ffffff;
     color: #000000;
     font-weight: 700;
 
-    &:nth-child(4n+2) {
-      margin-right: 156px;
-      max-width: 768px;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    flex: 0 0 240px;
-
-    &:nth-child(4n+2) {
-      margin-right: 240px;
-      max-width: 1200px;
+    &:nth-child(4n+3) {
+      margin-left: 20%;
     }
   }
 }

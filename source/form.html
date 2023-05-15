@@ -58,15 +58,15 @@
             <ul class="data-form__list">
               <li class="field-control">
                 <label class="field-control__label" for="name">Имя<sup>*</sup>:</label>
-                <input class="field-control__input" type="text" name="name" id="name" value="Пётр" required>
+                <input class="field-control__input" type="text" name="name" id="name" placeholder="Введите имя" value="Пётр" required>
               </li>
               <li class="field-control">
                 <label class="field-control__label" for="surname">Фамилия<sup>*</sup>:</label>
-                <input class="field-control__input" type="text" name="surname" id="surname" value="Пустота" required>
+                <input class="field-control__input" type="text" name="surname" id="surname" placeholder="Введите фамилию" value="Пустота" required>
               </li>
               <li class="field-control">
                 <label class="field-control__label" for="patronymic">Отчество:</label>
-                <input class="field-control__input" type="text" name="patronymic" id="patronymic" value="Викторович">
+                <input class="field-control__input" type="text" name="patronymic" id="patronymic" placeholder="Введите отчество" value="Викторович">
               </li>
             </ul>
           </fieldset>
@@ -76,11 +76,11 @@
             <ul class="data-form__list">
               <li class="field-control data-form__icon data-form__icon--phone">
                 <label class="field-control__label " for="phone">Контактный телефон<sup>*</sup>:</label>
-                <input class="field-control__input field-control__input--opacity" type="tel" name="phone-number" id="phone" value="Введите телефон" required>
+                <input class="field-control__input" type="tel" name="phone-number" id="phone" placeholder="Введите телефон" required>
               </li>
               <li class="field-control data-form__icon data-form__icon--mail">
                 <label class="field-control__label" for="e-mail">Электронная почта<sup>*</sup>:</label>
-                <input class="field-control__input field-control__input--opacity" type="email" name="e-mail" id="e-mail" value="Введите e-mail" required>
+                <input class="field-control__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
               </li>
             </ul>
           </fieldset>
@@ -91,21 +91,21 @@
             <ul class="data-form__list data-form__list--radio">
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="radio" name="impress" value="positive" checked>
+                  <input class="field-checkbox__input" type="radio" name="impress" value="positive" checked>
                   <span class="field-checkbox__mark field-checkbox__mark--radio"></span>
                   Скорее положительное
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="radio" name="impress" value="negative">
+                  <input class="field-checkbox__input" type="radio" name="impress" value="negative">
                   <span class="field-checkbox__mark field-checkbox__mark--radio"></span>
                   Скорее отрицательное
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="radio" name="impress" value="difficult">
+                  <input class="field-checkbox__input" type="radio" name="impress" value="difficult">
                   <span class="field-checkbox__mark field-checkbox__mark--radio"></span>
                   Затрудняюсь ответить
                 </label>
@@ -118,28 +118,28 @@
             <ul class="data-form__list data-form__list--checkbox">
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="checkbox" name="devil-bridge" checked>
+                  <input class="field-checkbox__input" type="checkbox" name="devil-bridge" checked>
                   <span class="field-checkbox__mark"></span>
                   Мост дьявола
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="checkbox" name="mount-Bell" checked>
+                  <input class="field-checkbox__input" type="checkbox" name="mount-Bell" checked>
                   <span class="field-checkbox__mark"></span>
                   Гора-Колокол
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="checkbox" name="slide-park" checked>
+                  <input class="field-checkbox__input" type="checkbox" name="slide-park" checked>
                   <span class="field-checkbox__mark"></span>
                   Слайд-парк
                 </label>
               </li>
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
-                  <input class="field-checkbox__intut" type="checkbox" name="red-rocks">
+                  <input class="field-checkbox__input" type="checkbox" name="red-rocks">
                   <span class="field-checkbox__mark"></span>
                   Красные скалы
                 </label>
@@ -152,7 +152,7 @@
             <label class="data-form__label" for="feedback">
               <span class="visually-hidden">Опишите подробно все свои впечатления в форме.</span>
             </label>
-            <textarea class="data-form__text" name="message" id="feedback" cols="1" rows="1">Опишите подробно все свои восторги</textarea>
+            <textarea class="data-form__text" name="message" id="feedback" placeholder="Опишите подробно все свои восторги" cols="1" rows="1"></textarea>
           </fieldset>
 
           <div class="form-feedback__sent form-feedback__sent--large">
@@ -166,29 +166,41 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <a class="main-footer__hashtag" href="#">#VISITSEDONA</a>
-        <div class="main-footer__social social">
-          <ul class="social__list">
+
+          <ul class="social">
             <li class="social__item">
               <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Мы в Вконтакте.</span>
+                <svg class="social__icon" width="24" height="24" aria-label="Перейти на страницу в Вконтакте">
+                  <use href="img/sprite.svg#vk-icon"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме.</span>
+                <svg class="social__icon" width="24" height="24" aria-label="Перейти в Telegram канал">
+                  <use href="img/sprite.svg#tg-icon"></use>
+                </svg>
               </a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
+                <svg class="social__icon" width="24" height="24" aria-label="Перейти на YouTube канал">
+                  <use href="img/sprite.svg#youtube-icon"></use>
+                </svg>
               </a>
             </li>
           </ul>
-        </div>
+
         <div class="main-footer__copyright">
-          <b class="main-footer__copyright-text">Разработано</b>
-          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
+            <b class="main-footer__copyright-text">Разработано</b>
             <span class="visually-hidden">HTML Academy.</span>
+            <svg width="28" height="35" aria-label="Перейти на сайт HTML Academy">
+              <use href="img/sprite.svg#html_academy"></use>
+            </svg>
           </a>
         </div>
       </div>
@@ -219,6 +231,6 @@
       </div>
     </div>
 
-    <script src="/source/js/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
