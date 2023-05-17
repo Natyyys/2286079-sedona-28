@@ -108,27 +108,9 @@
 }
 
 .data-form__text {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  background-color: #f2f2f2;
-  border: 0;
-  color: #000000;
-  width: 100%;
-  box-sizing: border-box;
   min-height: 150px;
   justify-items: stretch;
-  padding: 16px;
   margin-bottom: 56px;
-
-  &::placeholder {
-    color: fade(#000000, 30%);
-  }
-
-  &:focus {
-    outline: 0;
-    outline-offset: 0;
-  }
 
   @media (min-width: @tablet-width) {
     min-width: 648px;
@@ -141,5 +123,34 @@
   @media (min-width: @desktop-width) {
     width: 768px;
     margin-bottom: 48px;
+  }
+}
+
+.data-form__icon {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 20px;
+    background: #e6e6e6 center no-repeat;
+
+    @media (min-width: @tablet-width) {
+      right: 0;
+    }
+  }
+
+  &--phone {
+    &::after {
+      background-image: url("../img/phone.svg");
+    }
+  }
+
+  &--mail {
+    &::after {
+      background-image: url("../img/mail.svg");
+    }
   }
 }
