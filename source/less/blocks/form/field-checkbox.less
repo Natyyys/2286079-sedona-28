@@ -6,6 +6,10 @@
   position: relative;
   list-style: none;
 
+  &:focus-within .field-checkbox__mark {
+    background-color: #e5e5e5;
+  }
+
   @media (min-width: @tablet-width) {
     padding-right: 10px;
   }
@@ -41,6 +45,11 @@
   position: relative;
   margin: 0;
   margin-right: 16px;
+
+  &:disabled + .field-checkbox__mark,
+  &:disabled ~ .field-checkbox__label {
+    background-color: #fffafa;
+  }
 }
 
 .field-checkbox__input[type="radio"]:checked + .field-checkbox__mark::before {

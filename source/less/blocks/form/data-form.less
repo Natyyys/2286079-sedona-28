@@ -2,10 +2,13 @@
   border: none;
   margin: 0;
   padding: 0;
-  border-bottom: 1px solid #e5e5e5;
 
-  @media (min-width: @tablet-width) {
-    border: none;
+  &:not(:nth-last-child(-n+2)) {
+    border-bottom: 1px solid #e5e5e5;
+
+    @media (min-width: @tablet-width) {
+      border: none;
+    }
   }
 }
 
@@ -22,16 +25,16 @@
       width: 100%;
       background-color: #dbdbdb;
       left: 0;
-      top: calc(0% - 13px);
+      top: -13px;
       z-index: 0;
     }
 
     .data-form__legend {
       position: relative;
-      z-index: 10;
       width: 402px;
       padding: 0 30px;
       background-color: #ffffff;
+      z-index: 10;
     }
   }
 }
