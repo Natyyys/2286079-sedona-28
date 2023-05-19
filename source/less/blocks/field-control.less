@@ -1,10 +1,19 @@
 .field-control {
   padding: 0 20px;
-  margin-top: 16px;
+  margin-top: 14px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin-top: 10px;
+
+    &:nth-child(3) {
+      margin-top: 16px;
+    }
   }
+}
+
+.field-control__label {
+  margin-left: 16px;
 }
 
 .field-control__input {
