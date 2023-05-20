@@ -1,6 +1,10 @@
 .search {
   text-align: center;
   padding-bottom: 6px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .search__wrapper {
@@ -8,10 +12,14 @@
 
   @media (min-width: @tablet-width) {
     max-width: 458px;
-    padding: 60px 20px 55px;
+    padding: 60px 0 55px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 66px;
   }
 }
 
@@ -25,12 +33,23 @@
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
+    margin-bottom: 34px;
   }
 }
 
 .search__description {
   margin: 0;
   margin-bottom: 30px;
+
+  @media (max-width: @mobile-width) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 44px;
+  }
 }
 
 .search__button {
