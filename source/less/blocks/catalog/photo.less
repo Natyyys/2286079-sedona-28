@@ -1,16 +1,24 @@
 .photo-section {
-  padding: 37px 20px 25px;
+  padding: 37px 20px 36px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 468px;
 
+  .section-page__title {
+    margin-bottom: 26px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 66px 20px;
+    padding: 66px 20px 80px;
+
+    .section-page__title {
+      margin-bottom: 32px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 100px 20px 65px;
+    padding: 100px 20px 88px;
   }
 }
 
@@ -99,6 +107,7 @@
 }
 
 .photo__title {
+  font-size: 14px;
   font-weight: 700;
   color: #000000;
   margin: 0;
@@ -118,11 +127,11 @@
 }
 
 .photo__info-wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding: 22px 0 15px;
+    padding: 24px 0 14px;
   }
 }
 
@@ -154,10 +163,10 @@
   color: #000000;
   font-size: 14px;
   line-height: 21px;
-  padding-left: 14px;
+  padding-left: 8px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 9px;
+    padding-left: 4px;
   }
 
   @media (min-width: @desktop-width) {
