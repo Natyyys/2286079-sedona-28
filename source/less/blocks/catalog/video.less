@@ -2,12 +2,12 @@
   padding: 0 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 60px 40px;
+    padding: 28px 60px 44px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 84px;
-    padding: 62px 120px 64px;
+    margin-bottom: 24px;
+    padding: 0 120px 64px;
   }
 }
 
@@ -18,17 +18,38 @@
   margin: 0 auto;
   max-width: 455px;
 
+  .section-page__title {
+    margin-bottom: 28px;
+  }
+
+  .section-page__description {
+    padding: 0 20px;
+  }
+
   @media (min-width: @tablet-width) {
-    padding: 28px 0 66px;
+    padding: 28px 0 88px;
+
+    .section-page__title {
+      margin-bottom: 34px;
+    }
+
+    .section-page__description {
+      padding: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 62px 0 64px;
+    padding: 62px 0 86px;
+
+    .section-page__title {
+      margin-bottom: 32px;
+    }
   }
 }
 
 .video__wrapper {
   position: relative;
+  margin-bottom: -4px;
 
   & picture {
     &::before {

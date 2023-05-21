@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
 
   <body class="page-wrapper">
@@ -75,13 +77,13 @@
               </li>
               <li class="services__item services__item--souvenirs">
                 <h4 class="services__title">Сувениры</h4>
-                <p class="services__description">Не только китайского, но и местного производства!</p>
+                <p class="services__description">Не только китайского,<br> но и местного производства!</p>
               </li>
             </ul>
           </li>
           <li class="advantages__item-img advantages__item-img--reverse">
             <div class="advantages__item-photo advantages__item-photo--reverse advantages__item-photo--blue ">
-            <h3 class="advantages__title">Там есть мост дьявола</h3>
+            <h3 class="advantages__title">Там есть&ensp;<br> мост дьявола</h3>
             <p class="advantages__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
             <picture>
@@ -100,7 +102,7 @@
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Красивая дорога</h3>
-            <p class="advantages__description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="advantages__description">Ехать в Седону из Лас-<br>Вегаса совсем &ensp;<br> не скучно!</p>
           </li>
           <li class="advantages__item">
             <h3 class="advantages__title">Мало туристов</h3>
@@ -113,7 +115,7 @@
         <div class="search__wrapper">
           <h2 class="visually-hidden">Поиск гостиницы.</h2>
           <p class="search__title">Заинтересовались?</p>
-          <p class="search__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="search__description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search__button button" href="#">
             <span>Найти гостиницу</span>
           </a>
@@ -131,25 +133,25 @@
 
           <ul class="social">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Мы в Вконтакте.</span>
-                <svg class="social__icon" width="24" height="24" aria-label="Перейти на страницу в Вконтакте">
+                <svg class="social__icon" width="24" height="24">
                   <use href="img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <a class="social__link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме.</span>
-                <svg class="social__icon" width="24" height="24" aria-label="Перейти в Telegram канал">
+                <svg class="social__icon" width="24" height="24">
                   <use href="img/sprite.svg#tg-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
-                <svg class="social__icon" width="24" height="24" aria-label="Перейти на YouTube канал">
+                <svg class="social__icon" width="24" height="24">
                   <use href="img/sprite.svg#youtube-icon"></use>
                 </svg>
               </a>
@@ -160,7 +162,7 @@
           <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
             <b class="main-footer__copyright-text">Разработано</b>
             <span class="visually-hidden">HTML Academy.</span>
-            <svg width="28" height="35" aria-label="Перейти на сайт HTML Academy">
+            <svg width="28" height="35">
               <use href="img/sprite.svg#html_academy"></use>
             </svg>
           </a>

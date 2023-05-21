@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
 
   <body class="page-wrapper">
@@ -87,7 +89,9 @@
         </div>
 
           <fieldset class="data-form data-form--large">
-            <legend class="data-form__legend">Ваше общее впечатление:</legend>
+            <legend class="data-form__legend">
+              <span class="data-form__title">Ваше общее впечатление:</span>
+            </legend>
             <ul class="data-form__list data-form__list--radio">
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
@@ -114,13 +118,15 @@
           </fieldset>
 
           <fieldset class="data-form data-form--large">
-            <legend class="data-form__legend">Посещенные достопримечательности:</legend>
+            <legend class="data-form__legend">
+              <span class="data-form__title">Посещенные достопримечательности:</span>
+            </legend>
             <ul class="data-form__list data-form__list--checkbox">
               <li class="field-checkbox">
                 <label class="field-checkbox__label">
                   <input class="field-checkbox__input" type="checkbox" name="devil-bridge" checked>
                   <span class="field-checkbox__mark"></span>
-                  Мост дьявола
+                  Мост Дьявола
                 </label>
               </li>
               <li class="field-checkbox">
@@ -147,12 +153,14 @@
             </ul>
           </fieldset>
 
-          <fieldset class="data-form data-form--large">
-            <legend class="data-form__legend">Опишите свои эмоции:</legend>
+          <fieldset class="data-form field-control data-form--large">
+            <legend class="data-form__legend">
+              <span class="data-form__title">Опишите свои эмоции:</span>
+            </legend>
             <label class="data-form__label" for="feedback">
               <span class="visually-hidden">Опишите подробно все свои впечатления в форме.</span>
             </label>
-            <textarea class="data-form__text" name="message" id="feedback" placeholder="Опишите подробно все свои восторги" cols="1" rows="1"></textarea>
+            <textarea class="data-form__text field-control__input" name="message" id="feedback" placeholder="Опишите подробно все свои восторги" cols="1" rows="1"></textarea>
           </fieldset>
 
           <div class="form-feedback__sent form-feedback__sent--large">
@@ -167,27 +175,27 @@
       <div class="main-footer__wrapper">
         <a class="main-footer__hashtag" href="#">#VISITSEDONA</a>
 
-          <ul class="social">
+          <ul class="social main-footer__list">
             <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+              <a class="social__link" href="https://vk.com/htmlacademy">
                 <span class="visually-hidden">Мы в Вконтакте.</span>
-                <svg class="social__icon" width="24" height="24" aria-label="Перейти на страницу в Вконтакте">
+                <svg class="social__icon" width="24" height="24">
                   <use href="img/sprite.svg#vk-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <a class="social__link" href="https://t.me/htmlacademy">
                 <span class="visually-hidden">Мы в Телеграме.</span>
-                <svg class="social__icon" width="24" height="24" aria-label="Перейти в Telegram канал">
+                <svg class="social__icon" width="24" height="24">
                   <use href="img/sprite.svg#tg-icon"></use>
                 </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
                 <span class="visually-hidden">Мы в Ютубе.</span>
-                <svg class="social__icon" width="24" height="24" aria-label="Перейти на YouTube канал">
+                <svg class="social__icon" width="24" height="24">
                   <use href="img/sprite.svg#youtube-icon"></use>
                 </svg>
               </a>
@@ -198,7 +206,7 @@
           <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTML Academy">
             <b class="main-footer__copyright-text">Разработано</b>
             <span class="visually-hidden">HTML Academy.</span>
-            <svg width="28" height="35" aria-label="Перейти на сайт HTML Academy">
+            <svg width="28" height="35">
               <use href="img/sprite.svg#html_academy"></use>
             </svg>
           </a>

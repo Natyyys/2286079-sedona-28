@@ -5,7 +5,8 @@
   color: #000000;
   margin-bottom: 30px;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     color: @main-color;
   }
 
@@ -21,8 +22,9 @@
 .main-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 33px 0;
+  padding: 36px 18px;
   align-items: center;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -30,6 +32,7 @@
     margin: 0 60px;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,10 +40,19 @@
   }
 }
 
+.main-footer__list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 6px;
+}
+
 .main-footer__copyright-link {
   display: flex;
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     color: @main-color;
   }
 
