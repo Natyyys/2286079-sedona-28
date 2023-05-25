@@ -3,9 +3,10 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  padding: 10px 0 10px 26px;
+  padding: 10px 0 10px 28px;
   position: relative;
   list-style: none;
+  display: flex;
 
   &:focus-within .field-checkbox__mark {
     background-color: #e5e5e5;
@@ -16,7 +17,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 20px;
+    margin-left: 22px;
+    height: auto;
+    display: block;
   }
 }
 
@@ -46,6 +49,7 @@
   position: relative;
   margin: 0;
   margin-right: 16px;
+  appearance: none;
 
   &:disabled + .field-checkbox__mark,
   &:disabled ~ .field-checkbox__label {
@@ -83,4 +87,13 @@
 .field-checkbox__input[type="radio"]:checked + .field-checkbox__mark:active::before,
 .field-checkbox__input[type="checkbox"]:checked + .field-checkbox__mark:active::before {
   opacity: 0.3;
+}
+
+.field-checkbox__text {
+  margin-left: 16px;
+  display: inline-block;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 12px;
+  }
 }

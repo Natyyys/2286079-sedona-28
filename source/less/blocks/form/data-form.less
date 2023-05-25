@@ -21,13 +21,13 @@
 }
 
 .data-form--large {
-  padding: 30px 20px 0;
+  padding: 22px 20px 0;
 
   @media (min-width: @tablet-width) {
     grid-column: 1/-1;
-    margin-bottom: 42px;
+    margin-bottom: 32px;
     position: relative;
-    padding: 30px 60px 0;
+    padding: 20px 60px 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -86,8 +86,8 @@
 .data-form__list--radio {
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  padding-bottom: 33px;
+  gap: 16px;
+  padding-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     padding-bottom: 16px;
@@ -95,10 +95,14 @@
     grid-template-columns: repeat(2, 280px);
     place-content: center;
     grid-column-gap: 16px;
+
+    .field-checkbox__text {
+      max-width: 185px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 16px;
+    padding-top: 6px;
     margin-bottom: 26px;
     display: grid;
     grid-template-columns: repeat(3, 280px);
@@ -111,8 +115,12 @@
 .data-form__list--checkbox {
   display: flex;
   flex-direction: column;
-  gap: 36px;
-  padding-bottom: 33px;
+  gap: 16px;
+  padding-bottom: 22px;
+
+  .field-checkbox__text {
+    max-width: 218px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-bottom: 10px;
@@ -120,18 +128,23 @@
     grid-template-columns: repeat(2, 224px);
     place-content: center;
     grid-column-gap: 32px;
-    grid-row-gap: 36px;
+    //grid-row-gap: 36px;
+
+    .field-checkbox__text {
+      max-width: 122px;
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    padding-top: 20px;
+    grid-template-columns: repeat(4, max-content);
+    grid-template-rows: min-content;
+    gap: 62px;
     margin-bottom: 44px;
 
     .field-checkbox__label {
-      padding-right: 16px;
+      padding-right: 0;
+      margin-left: 0;
     }
   }
 }
@@ -139,13 +152,13 @@
 .data-form__text {
   min-height: 150px;
   justify-items: stretch;
-  margin: -8px 0 50px;
+  margin: 0 0 48px;
 
   @media (min-width: @tablet-width) {
     min-width: 648px;
     display: block;
     min-height: 160px;
-    margin: -12px 0 4px;
+    margin: -4px 0 4px;
   }
 
   @media (min-width: @desktop-width) {

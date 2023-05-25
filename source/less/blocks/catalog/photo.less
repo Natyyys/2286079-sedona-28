@@ -67,6 +67,16 @@
       height: 400px;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    .photo__info-wrapper {
+      padding: 22px 0 15px 1px;
+    }
+
+    .photo__title {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .photo__item:nth-child(3n) {
@@ -114,6 +124,7 @@
 
   @media (min-width: @desktop-width) {
     color: #ffffff;
+    padding-bottom: 4px;
   }
 }
 
@@ -132,6 +143,10 @@
   @media (min-width: @tablet-width) {
     margin: 0;
     padding: 24px 0 14px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 17px 0 17px 5px;
   }
 }
 
