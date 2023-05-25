@@ -117,9 +117,15 @@
   }
 
   .main-nav--nojs .main-nav__list {
-    position: static;
+    position: absolute;
+    top: 0;
     min-height: 0;
-    //margin-top: 40px;
+  }
+
+  .main-nav--nojs {
+    .main-nav__toggle {
+      display: none;
+    }
   }
 }
 
