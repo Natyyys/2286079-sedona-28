@@ -55,11 +55,13 @@
   padding: 0;
   list-style: none;
   counter-reset: number 0;
+  position: relative;
 
   @media (max-width: @mobile-width) {
     &::before {
       content: url("../img/triangle-section.svg");
       position: absolute;
+      top: -14px;
     }
   }
 
