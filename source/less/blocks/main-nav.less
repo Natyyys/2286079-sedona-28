@@ -88,14 +88,6 @@
 
 .main-nav__item {
   @media (max-width: @mobile-width-only) {
-    &:hover {
-      background-color: @main-hover;
-    }
-
-    &:active {
-      background-color: @main-active;
-    }
-
     &:not(:last-child) {
       border-bottom: 1px solid rgba(1, 1, 1, 0.2);
     }
@@ -122,8 +114,13 @@
   color: #ffffff;
   padding: 17px 64px 11px;
 
+  &:hover {
+    background-color: @main-hover;
+  }
+
   &:active {
-    opacity: 0.3;
+    background-color: @main-active;
+    color: #ffffff30;
   }
 
   @media (min-width: @tablet-width) {
