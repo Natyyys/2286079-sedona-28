@@ -114,13 +114,15 @@
   color: #ffffff;
   padding: 17px 64px 11px;
 
-  &:hover {
-    background-color: @main-hover;
-  }
+  @media (max-width: @mobile-width-only) {
+    &:hover {
+      background-color: @main-hover;
+    }
 
-  &:active {
-    background-color: @main-active;
-    color: #ffffff30;
+    &:active {
+      background-color: @main-active;
+      color: #ffffff30;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -136,7 +138,7 @@
     }
 
     &:active {
-      color: #b3b3b3;
+      opacity: 0.3;
     }
 
     &--active {
