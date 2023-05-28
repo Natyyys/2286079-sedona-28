@@ -1,4 +1,10 @@
 .main-nav {
+  @media (max-width: @mobile-width-only) {
+    &:not(.main-nav--js) {
+      order: -1;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 100%;
   }
@@ -6,24 +12,29 @@
 
 .main-nav__toggle {
   @media (max-width: @mobile-width-only) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 64px;
-    height: 56px;
-    padding: 0;
-    background: transparent url("../img/button-toggle-closed.svg") center / 23px 22px no-repeat;
-    border: none;
+    display: none;
 
-    &:hover {
-      opacity: 0.6;
+    .main-nav--js & {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      width: 64px;
+      height: 56px;
+      padding: 0;
+      background: transparent url("../img/button-toggle-closed.svg") center / 23px 22px no-repeat;
+      border: none;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
-    &:active {
-      opacity: 0.3;
-    }
-
-    .main-nav--opened & {
+    .main-nav--js.main-nav--opened & {
       z-index: 1;
       background-image: url("../img/button-toggle-opened.svg");
     }
@@ -42,10 +53,6 @@
   text-align: center;
 
   @media (max-width: @mobile-width-only) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
     background-color: @main-color;
 
     &::after {
@@ -59,7 +66,14 @@
       pointer-events: none;
     }
 
-    .main-nav--opened & {
+    .main-nav--js & {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+    }
+
+    .main-nav--js.main-nav--opened & {
       display: block;
     }
   }
@@ -124,13 +138,12 @@
 }
 
 @media (max-width: @mobile-width-only) {
-    .main-nav--nojs .main-nav__toggle {
-      display: none;
-    }
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 
-    .main-nav--nojs .main-nav__item {
-      display: block;
-    }
+  .main-nav--nojs .main-nav__item {
+    display: block;
   }
 
   .main-nav--nojs .main-nav__list {
