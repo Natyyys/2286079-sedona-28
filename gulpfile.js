@@ -13,8 +13,6 @@ import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
 
-// Styles
-
 export const styles = () => {
   return gulp.src('source/less/style.less', { sourcemaps: true })
     .pipe(plumber())
@@ -28,23 +26,17 @@ export const styles = () => {
     .pipe(browser.stream());
 }
 
-//HTML
-
 const html = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('build'));
 }
 
-//Scripts
-
 const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
 }
-
-//Images
 
 const optimizeImages = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
@@ -57,8 +49,6 @@ const copyImages = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-//WebP
-
 const createWebp = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({
@@ -66,8 +56,6 @@ const createWebp = () => {
     }))
     .pipe(gulp.dest('build/img'));
 }
-
-//SVG
 
 const svg = () => {
   return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
@@ -85,8 +73,6 @@ const sprite = () => {
     .pipe(gulp.dest('build/img'));
 }
 
-//Copy
-
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
@@ -99,13 +85,9 @@ const copy = (done) => {
   done();
 }
 
-//Clean
-
 const clean = () => {
   return del('build');
 }
-
-// Server
 
 const server = (done) => {
   browser.init({
@@ -119,15 +101,16 @@ const server = (done) => {
   done();
 }
 
-// Watcher
+const reload = (done) => {
+  browser.reload();
+  done();
+}
 
 const watcher = () => {
   gulp.watch('source/less/**/*.less', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
-
-//Build
 
 export const build = gulp.series(
   clean,
@@ -142,8 +125,6 @@ export const build = gulp.series(
   ),
   sprite,
 );
-
-//Default
 
 export default gulp.series(
   clean,
