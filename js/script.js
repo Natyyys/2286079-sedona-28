@@ -1,0 +1,1 @@
+const CLASS_NAV_OPEN="main-nav--opened",CLASS_NAV_JS="main-nav--js",navMain=document.querySelector(".main-nav"),navToggle=document.querySelector(".main-nav__toggle");document.addEventListener("DOMContentLoaded",(()=>{navMain&&navToggle&&(navMain.classList.add(CLASS_NAV_JS),navToggle.addEventListener("click",(()=>{navMain.classList.toggle(CLASS_NAV_OPEN)})))}));
